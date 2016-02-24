@@ -16,10 +16,10 @@ Inside a webbrowser : localhost:8084
 
 # Import titanic notebook
 
-In the Zeppelin front page (Welcome to zeppelin), click on "Import note" (on left below "Notebook")
-Enter Titanic as notebook name
-Click on "Add from url"
-use the following url "https://raw.githubusercontent.com/hriviere/nightclazz_spark_ml/master/notebook_zeppelin/Titanic.json"
+* In the Zeppelin front page (Welcome to zeppelin), click on "Import note" (on left below "Notebook")
+* Enter Titanic as notebook name
+* Click on "Add from url"
+* use the following url "https://raw.githubusercontent.com/hriviere/nightclazz_spark_ml/master/notebook_zeppelin/Titanic.json"
 
 
 
