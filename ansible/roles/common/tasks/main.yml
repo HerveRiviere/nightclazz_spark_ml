@@ -1,0 +1,16 @@
+---
+- name: install the latest version of Docker
+  yum: name=docker state=latest
+
+- name: Check docker service
+  service: name=docker state=started
+
+- name: Install pip
+  easy_install: 
+      name=pip 
+
+- name: Install docker-py
+  pip: 
+      name=docker-py 
+      state=present
+

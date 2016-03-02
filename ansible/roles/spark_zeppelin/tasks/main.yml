@@ -1,0 +1,15 @@
+---
+- name: run container 
+  docker:
+    name: nightclazz_spark_ml
+    image: herveriviere/spark_zeppelin_standalone:v4
+    state: started
+    ports:
+    - "8080:8080"
+    - "8084:8084"
+    env:
+        SPARK_WORKER_CORES: 3
+        SPARK_WORKER_MEMORY: 800m
+    volumes:
+    - /home/ec2-user/nightclazz_spark_ml:/home/udl_spark
+
