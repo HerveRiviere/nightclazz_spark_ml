@@ -13,3 +13,12 @@
     volumes:
     - /home/ec2-user/nightclazz_spark_ml:/home/udl_spark
 
+- pause: seconds=10
+
+
+- name: Import titanic notebook 
+  shell: wget https://raw.githubusercontent.com/hriviere/nightclazz_spark_ml/master/notebook_zeppelin/Titanic.json && content=`cat Titanic.json` && curl --data ''"$content"'' http://localhost:8084/api/notebook/import && rm Titanic.json
+  args:
+    chdir: /home/ec2-user/nightclazz_spark_ml/notebook
+    creates: import_titanic.ok
+

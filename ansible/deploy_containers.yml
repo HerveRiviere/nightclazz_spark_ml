@@ -7,7 +7,4 @@
     - common
     - spark_zeppelin
 
-#TODO...
-#sudo wget https://raw.githubusercontent.com/hriviere/nightclazz_spark_ml/master/notebook_zeppelin/Titanic.json
-#content=`cat Titanic.json `
-#curl --data ''"$content"'' http://localhost:8084/api/notebook/import
+
