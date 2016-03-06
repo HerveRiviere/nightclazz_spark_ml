@@ -8,7 +8,7 @@ connect to ssh : ssh -l ec2-user -i <path_to_pem_file> ip
 
 ##Ansible : don't ask ssh fingerprint 
 export ANSIBLE_HOST_KEY_CHECKING=False
-
+cd nightclazz_spark_ml/ansible
 
 ## Check connection : 
 python -c 'import aws_tools as aws;aws.printInstancesState()'
