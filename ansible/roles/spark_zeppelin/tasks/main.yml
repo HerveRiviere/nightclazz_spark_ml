@@ -16,9 +16,36 @@
 - pause: seconds=10
 
 
-- name: Import titanic notebook 
-  shell: wget https://raw.githubusercontent.com/hriviere/nightclazz_spark_ml/master/notebook_zeppelin/Titanic.json && content=`cat Titanic.json` && curl --data ''"$content"'' http://localhost:8084/api/notebook/import && rm Titanic.json
+- name: Import titanic notebook 1
+  shell: wget https://raw.githubusercontent.com/hriviere/nightclazz_spark_ml/master/notebook_zeppelin/01%20-%20Titanic%20_%20Charger%20et%20explorer%20les%20donn%C3%A9es.json && curl -d @-d @'01 - Titanic _ Charger et explorer les données.json' http://localhost:8084/api/notebook/import && rm '01 - Titanic _ Charger et explorer les données.json'
   args:
     chdir: /home/ec2-user/nightclazz_spark_ml/notebook
-    creates: import_titanic.ok
+
+
+- name: Import titanic notebook 2
+  shell: wget https://raw.githubusercontent.com/hriviere/nightclazz_spark_ml/master/notebook_zeppelin/02%20-%20Titanic%20_%20Construire%20le%20mod%C3%A8le.json && content=`cat '02 - Titanic _ Construire le modèle.json'` && curl --data ''"$content"'' http://localhost:8084/api/notebook/import && rm '02 - Titanic _ Construire le modèle.json'
+  args:
+    chdir: /home/ec2-user/nightclazz_spark_ml/notebook
+
+
+- name: Import titanic notebook 3
+  shell: wget  https://raw.githubusercontent.com/hriviere/nightclazz_spark_ml/master/notebook_zeppelin/03%20-%20Titanic%20_%20Entrainer%20et%20analyser%20le%20mod%C3%A8le.json && content=`cat '03 - Titanic _ Entrainer et analyser le modèle.json'` && curl --data ''"$content"'' http://localhost:8084/api/notebook/import && rm '03 - Titanic _ Entrainer et analyser le modèle.json'
+  args:
+    chdir: /home/ec2-user/nightclazz_spark_ml/notebook
+
+
+
+- name: Import titanic notebook 4
+  shell: wget https://raw.githubusercontent.com/hriviere/nightclazz_spark_ml/master/notebook_zeppelin/04%20-%20Titanic%20%20_%20Utiliser%20le%20mod%C3%A8le.json && content=`cat '04 - Titanic  _ Utiliser le modèle.json'` && curl --data ''"$content"'' http://localhost:8084/api/notebook/import && rm '04 - Titanic  _ Utiliser le modèle.json'
+  args:
+    chdir: /home/ec2-user/nightclazz_spark_ml/notebook
+
+
+- name: Import titanic notebook 4
+  shell: wget https://raw.githubusercontent.com/hriviere/nightclazz_spark_ml/master/notebook_zeppelin/05%20-%20Titanic%20_%20Aller%20plus%20loin.json && content=`cat '05 - Titanic _ Aller plus loin.json'` && curl --data ''"$content"'' http://localhost:8084/api/notebook/import && rm '05 - Titanic _ Aller plus loin.json'
+  args:
+    chdir: /home/ec2-user/nightclazz_spark_ml/notebook
+
+
+
 

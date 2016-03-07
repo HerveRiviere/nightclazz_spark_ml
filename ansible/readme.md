@@ -2,6 +2,14 @@
 Ansible 2.X
 boto (python aws cli)
 
+#Amazon API credential
+
+vi ~/.boto
+[Credentials]
+aws_access_key_id = XXXXXXXXXXXXXXXXXXXXXXXX
+aws_secret_access_key = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
 ##Amazon pem file
 chmod 400 *.pem
 connect to ssh : ssh -l ec2-user -i <path_to_pem_file> ip
