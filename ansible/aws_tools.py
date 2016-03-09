@@ -27,5 +27,4 @@ def generateListingGDoc() :
 	for instance in reservations : 
 		ip_adress = instance.ip_address
 		if(ip_adress!=None):
-			print ip_adress+",Zeppelin,http://"+ip_adress+":8084,,Spark UI ,http://"+ip_adress+":8080"
-
+			print ip_adress+",Zeppelin,http://"+ip_adress+":8080,,Spark UI ,http://"+ip_adress+":8084"
